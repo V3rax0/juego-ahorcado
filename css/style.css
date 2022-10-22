@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+#cuerpo {
+  display: grid;
+  font-family: 'Montserrat';
+  height: 100vh;
+  background-color: #e5e5e5;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(90px, 1fr) 7fr minmax(70px, 1fr);
+  grid-template-areas:
+    "encabezado"
+    "inicio"
+    "pie-pagina";
+}
+
+.encabezado {
+  grid-area: encabezado;
+  display: grid;
+  place-content: start;
+  align-items: center;
+  grid-auto-flow: column;
+}
+
+.encabezado img {
+  margin: 20px;
+}
+
+.encabezado h1 {
+  font-size: 2em;
+  color: #000000;
+  font-weight: 500;
+}
+
+.inicio {
+  grid-area: inicio;
+  display: grid;
+  place-items: center;
+}
+
+.botones-inicio {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 20px;
+}
+
+.botones {
+  font-size: 1.5em;
+  border-radius: 10px;
+  font-family: Inter;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+#iniciar-juego.botones {
+  background: linear-gradient(90deg, rgba(110,8,130,0.5) 0%, rgba(7,165,195,0.87718837535014) 35%, rgba(255,0,159,0.5046393557422969) 100%);;
+  color: #ffffff;
+  height: 114px;
+  width: 317px;
+  padding: 24px;
+}
+#nueva-palabra.botones {
+  background: linear-gradient(90deg, rgba(1,14,33,0.8491771708683473) 0%, rgba(195,7,150,0.87718837535014) 47%, rgba(42,0,255,0.5046393557422969) 100%);;
+  color: #000000;
+  width: 280px;
+  height: 67px;
+
+}
+
+.nueva-palabra {
+  grid-area: nueva-palabra;
+  grid-template-rows: 3fr 0.1fr 1fr;
+  display: none;
+  place-items: center;
+}
+
+.nueva-palabra_textarea {
+  background: none;
+  border: none;
+  margin: 20px 20px 20px 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0a3871;
+  text-align: center;
+  resize: none;
+  outline: none;
+}
+
+.info {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.info img {
+  margin-right: 10px;
+}
+
+#boton-guardar.botones,
+#boton-nuevoJuego.botones {
+  width: 332px;
+  height: 67px;
+  background: #0a3871;
+  color: #ffffff;
+}
+
+#boton-cancelar.botones,
+#boton-salir.botones {
+  width: 332px;
+  height: 67px;
+  background: #ffffff;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+}
+
+.canvas {
+  grid-area: canvas;
+  display: none;
+  margin: 0 auto;
+}
+
+.horca,
+.palabra {
+  margin: 0 auto;
+}
+
+.pie-pagina {
+  grid-area: pie-pagina;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  justify-content: space-around;
+}
+
+.pie-pagina a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  border: #0a3871 1px solid;
+  border-radius: 3px;
+}
+
+
+.linkedin,.github,.ig {
+  padding: 1rem;
+}
+
+.linkedin {
+  color: white;
+  background-color: #0A66C2;
+}
+
+.github {
+  background-color: #ffffff;
+  color: black;
+}
+
+.ig {
+  color: white;
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
